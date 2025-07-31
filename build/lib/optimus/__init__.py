@@ -1,5 +1,5 @@
 """
-Optimus Chem - Comprehensive Chemical Analysis Package
+Optimus - Comprehensive Chemical Analysis Package
 
 A Python package for accurate molecular property calculations and ADMET rules analysis.
 Provides Discovery Studio-level accuracy for drug discovery applications.

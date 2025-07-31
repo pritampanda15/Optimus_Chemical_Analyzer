@@ -1,4 +1,4 @@
-# Optimus - Comprehensive Chemical Analysis Package
+# Optimus Chem - Comprehensive Chemical Analysis Package
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/pritampanda15/Optimus_Chemical_Analyzer/main/logo.png" alt="Optimus Logo" width="300">
@@ -8,7 +8,7 @@
 <img src="https://img.shields.io/badge/RDKit-Latest-green.svg" alt="RDKit">
 <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License">
 
-Optimus is a comprehensive Python package for molecular property calculations and ADMET (Absorption, Distribution, Metabolism, Excretion, Toxicity) rules analysis. It provides accurate calculations matching Discovery Studio standards for drug discovery applications.
+Optimus Chem is a comprehensive Python package for molecular property calculations and ADMET (Absorption, Distribution, Metabolism, Excretion, Toxicity) rules analysis. It provides accurate calculations matching Discovery Studio standards for drug discovery applications.
 
 ## Features
 
@@ -51,13 +51,13 @@ print(results.drug_likeness_score)  # 0.85
 ## Installation
 
 ```bash
-pip install optimus
+pip install optimus-chem
 ```
 
 ### From Source
 ```bash
 https://github.com/pritampanda15/Optimus_Chemical_Analyzer
-cd optimus
+cd Optimus_Chemical_Analyzer
 pip install -e .
 ```
 
@@ -94,7 +94,30 @@ print(df[['SMILES', 'MW', 'LogP', 'Lipinski_Violations']])
 ```
 
 ### Command Line Interface
+
+#### Available Commands
 ```bash
+optimus --help
+```
+
+**Options:**
+- `--version`  Show the version and exit.
+- `--help`     Show this message and exit.
+
+**Commands:**
+- `analyze`   Analyze a single SMILES string.
+- `batch`     Analyze multiple compounds from a file.
+- `report`    Generate HTML report from analysis results.
+- `validate`  Validate a SMILES string.
+
+#### Command Usage Examples
+```bash
+# Get help for specific commands
+optimus analyze --help
+optimus batch --help
+optimus report --help
+optimus validate --help
+
 # Analyze single compound
 optimus analyze "CCO"
 
@@ -103,6 +126,9 @@ optimus batch compounds.smi --output results.csv
 
 # Generate report
 optimus report compounds.smi --format html
+
+# Validate SMILES
+optimus validate "CCO"
 ```
 
 ## API Reference
@@ -168,9 +194,9 @@ The HTML report includes:
 
 ### Sample HTML Output Features:
 - ✅ **Pass/Fail Indicators**: Green for pass, red for fail, gray for N/A
-- 📊 **Summary Tables**: Key metrics and rule compliance rates
-- 🔍 **Detailed Analysis**: Molecular properties and ADMET rule results
-- 📱 **Responsive Design**: Works on desktop and mobile devices
+-  **Summary Tables**: Key metrics and rule compliance rates
+-  **Detailed Analysis**: Molecular properties and ADMET rule results
+-  **Responsive Design**: Works on desktop and mobile devices
 
 ## Examples
 
@@ -226,7 +252,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you use Optimus in your research, please cite:
 
 ```
-Optimus: Comprehensive Chemical Analysis Package for Drug Discovery
+Optimus Chem: Comprehensive Chemical Analysis Package for Drug Discovery
 P.K.Panda.et al. (2025)
 ```
 

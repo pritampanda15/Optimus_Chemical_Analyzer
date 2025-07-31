@@ -10,7 +10,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="optimus",
+    name="optimus-chem",
     version="1.0.0",
     author="Pritam Kumar Panda",
     author_email="pritam@stanford.edu",

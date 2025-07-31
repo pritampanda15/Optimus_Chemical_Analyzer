@@ -2,9 +2,9 @@ Metadata-Version: 2.4
 Name: optimus-chem
 Version: 1.0.0
 Summary: Comprehensive Chemical Analysis Package for Drug Discovery
-Home-page: https://github.com/username/optimus
-Author: Pritam
-Author-email: pritam@example.com
+Home-page: https://github.com/pritampanda15/Optimus_Chemical_Analyzer
+Author: Pritam Kumar Panda
+Author-email: pritam@stanford.edu
 Classifier: Development Status :: 4 - Beta
 Classifier: Intended Audience :: Science/Research
 Classifier: License :: OSI Approved :: MIT License
@@ -46,13 +46,17 @@ Dynamic: requires-dist
 Dynamic: requires-python
 Dynamic: summary
 
-# Optimus - Comprehensive Chemical Analysis Package
+# Optimus Chem - Comprehensive Chemical Analysis Package
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/pritampanda15/Optimus_Chemical_Analyzer/main/logo.png" alt="Optimus Logo" width="300">
+</div>
 
 <img src="https://img.shields.io/badge/Python-3.7%2B-blue.svg" alt="Python 3.7+">
 <img src="https://img.shields.io/badge/RDKit-Latest-green.svg" alt="RDKit">
 <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License">
 
-Optimus is a comprehensive Python package for molecular property calculations and ADMET (Absorption, Distribution, Metabolism, Excretion, Toxicity) rules analysis. It provides accurate calculations matching Discovery Studio standards for drug discovery applications.
+Optimus Chem is a comprehensive Python package for molecular property calculations and ADMET (Absorption, Distribution, Metabolism, Excretion, Toxicity) rules analysis. It provides accurate calculations matching Discovery Studio standards for drug discovery applications.
 
 ## Features
 
@@ -100,8 +104,8 @@ pip install optimus-chem
 
 ### From Source
 ```bash
-git clone https://github.com/username/optimus.git
-cd optimus
+https://github.com/pritampanda15/Optimus_Chemical_Analyzer
+cd Optimus_Chemical_Analyzer
 pip install -e .
 ```
 
@@ -178,6 +182,44 @@ Each rule returns a `RuleResult` object with:
 - `details`: Detailed breakdown of criteria
 
 
+## HTML Report Generation
+
+Optimus can generate comprehensive HTML reports with interactive visualizations and detailed analysis results:
+
+```python
+from optimus import ChemicalAnalyzer
+
+analyzer = ChemicalAnalyzer()
+
+# Analyze multiple compounds
+smiles_list = [
+    "CCO",  # Ethanol
+    "CC(=O)OC1=CC=CC=C1C(=O)O",  # Aspirin
+    "CN1C=NC2=C1C(=O)N(C(=O)N2C)C"  # Caffeine
+]
+
+# Generate HTML report
+analyzer.generate_html_report(smiles_list, output_file="analysis_report.html")
+```
+
+### Command Line HTML Report
+```bash
+# Generate HTML report from SMILES file
+optimus report compounds.smi --format html --output report.html
+```
+
+The HTML report includes:
+- **Summary Statistics**: Total compounds, success rates, average properties
+- **Rule Pass Rates**: Pass/fail statistics for all 14 ADMET rules
+- **Individual Results**: Detailed breakdown for each compound with color-coded pass/fail indicators
+- **Interactive Features**: Sortable tables and responsive design
+
+### Sample HTML Output Features:
+- ✅ **Pass/Fail Indicators**: Green for pass, red for fail, gray for N/A
+- 📊 **Summary Tables**: Key metrics and rule compliance rates
+- 🔍 **Detailed Analysis**: Molecular properties and ADMET rule results
+- 📱 **Responsive Design**: Works on desktop and mobile devices
+
 ## Examples
 
 ### Drug-likeness Assessment
@@ -232,12 +274,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you use Optimus in your research, please cite:
 
 ```
-Optimus: Comprehensive Chemical Analysis Package for Drug Discovery
-Author et al. (2024)
+Optimus Chem: Comprehensive Chemical Analysis Package for Drug Discovery
+P.K.Panda.et al. (2025)
 ```
+
 
 ## Support
 
-- 📧 Email: support@optimus-chem.com
-- 🐛 Issues: [GitHub Issues](https://github.com/username/optimus/issues)
-- 📖 Documentation: [Full Documentation](https://optimus-chem.readthedocs.io)
+- 📧 Email: pritam@stanford.edu
+- 🐛 Issues: [GitHub Issues](https://github.com/pritampanda15/Optimus_Chemical_Analyzer)

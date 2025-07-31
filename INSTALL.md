@@ -1,9 +1,9 @@
-# Installation Guide for Optimus
+# Installation Guide for Optimus Chem
 
 ## Quick Installation
 
 ```bash
-cd UI_for_chemicals/optimus
+cd Optimus_Chemical_Analyzer
 pip install -e .
 ```
 
@@ -18,8 +18,8 @@ pip install -e .
 ### Option 1: Development Installation (Recommended)
 
 ```bash
-# Clone or navigate to the optimus directory
-cd optimus
+# Clone or navigate to the Optimus Chemical Analyzer directory
+cd Optimus_Chemical_Analyzer
 
 # Install in development mode
 pip install -e .
@@ -30,7 +30,7 @@ pip install -e .
 ### Option 2: Standard Installation
 
 ```bash
-cd optimus
+cd Optimus_Chemical_Analyzer
 pip install .
 ```
 
@@ -38,7 +38,7 @@ pip install .
 
 ```bash
 # Build the package first
-cd optimus
+cd Optimus_Chemical_Analyzer
 python setup.py bdist_wheel
 
 # Install the wheel
@@ -59,8 +59,8 @@ print(f"Lipinski Violations: {result.lipinski_violations}")
 ## Test the Package
 
 ```bash
-cd optimus
-python test_optimus.py
+cd Optimus_Chemical_Analyzer
+python test/test_optimus.py
 ```
 
 ## Command Line Usage
@@ -100,11 +100,11 @@ mamba install -c conda-forge rdkit
 If you get import errors:
 
 ```bash
-# Check if optimus is installed correctly
+# Check if optimus-chem is installed correctly
 pip list | grep optimus
 
 # Reinstall in development mode
-pip uninstall optimus
+pip uninstall optimus-chem
 pip install -e .
 ```
 

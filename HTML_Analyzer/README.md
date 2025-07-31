@@ -1,4 +1,4 @@
-# 🧬 Optimus Chemical Analyzer
+# 🧬 Optimus Chem Chemical Analyzer
 
 **Complete ADMET Rules Analysis for Drug Discovery with Interactive 3D Visualization**
 

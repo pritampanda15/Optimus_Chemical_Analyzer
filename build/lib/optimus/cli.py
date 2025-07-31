@@ -1,5 +1,5 @@
 """
-Command Line Interface for Optimus Chem
+Command Line Interface for Optimus
 
 Provides command-line access to chemical analysis functionality.
 """
@@ -17,7 +17,7 @@ from .utils import read_smiles_file, validate_smiles
 @click.group()
 @click.version_option(version="1.0.0")
 def main():
-    """Optimus Chem - Comprehensive Chemical Analysis Package"""
+    """Optimus - Comprehensive Chemical Analysis Package"""
     pass
 
 
@@ -232,7 +232,7 @@ def _generate_html_report(results, template: str) -> str:
     <!DOCTYPE html>
     <html>
     <head>
-        <title>Optimus Chem Analysis Report</title>
+        <title>Optimus Analysis Report</title>
         <style>
             body {{ font-family: Arial, sans-serif; margin: 20px; }}
             table {{ border-collapse: collapse; width: 100%; margin: 20px 0; overflow-x: auto; }}
@@ -247,7 +247,7 @@ def _generate_html_report(results, template: str) -> str:
         </style>
     </head>
     <body>
-        <h1>Optimus Chem Chemical Analysis Report</h1>
+        <h1>Optimus Chemical Analysis Report</h1>
         <p>Generated for {len(results)} compounds</p>
         
         <h2>Summary Statistics</h2>
