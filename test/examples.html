@@ -1,0 +1,2383 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Optimus Analysis Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            table { border-collapse: collapse; width: 100%; margin: 20px 0; overflow-x: auto; }
+            th, td { border: 1px solid #ddd; padding: 6px; text-align: center; font-size: 12px; }
+            th { background-color: #f2f2f2; font-weight: bold; }
+            .pass { color: green; font-weight: bold; }
+            .fail { color: red; font-weight: bold; }
+            .na { color: gray; font-style: italic; }
+            .smiles { font-family: monospace; text-align: left; }
+            .summary-table { width: 50%; }
+            .summary-table th, .summary-table td { text-align: left; padding: 8px; }
+        </style>
+    </head>
+    <body>
+        <h1>Optimus Chemical Analysis Report</h1>
+        <p>Generated for 100 compounds</p>
+        
+        <h2>Summary Statistics</h2>
+        <table class="summary-table">
+            <tr><th>Metric</th><th>Value</th></tr>
+    
+            <tr><td>Total Compounds</td><td>100</td></tr>
+            <tr><td>Success Rate</td><td>100.0%</td></tr>
+            <tr><td>Average MW</td><td>265.6 Da</td></tr>
+            <tr><td>Average LogP</td><td>1.66</td></tr>
+            <tr><td>Average TPSA</td><td>48.8 Ų</td></tr>
+            <tr><td>Drug-like Fraction</td><td>91.0%</td></tr>
+        </table>
+        
+        <h2>Rule Pass Rates</h2>
+        <table class="summary-table">
+            <tr><th>Rule</th><th>Pass Rate</th></tr>
+            <tr><td>Lipinski (Ro5)</td><td>100.0%</td></tr>
+            <tr><td>Veber</td><td>100.0%</td></tr>
+            <tr><td>Ghose</td><td>43.0%</td></tr>
+            <tr><td>Egan</td><td>100.0%</td></tr>
+            <tr><td>Muegge</td><td>89.0%</td></tr>
+            <tr><td>Rule of 3</td><td>19.0%</td></tr>
+            <tr><td>CNS MPO</td><td>33.0%</td></tr>
+            <tr><td>bRo5</td><td>0.0%</td></tr>
+            <tr><td>PAINS</td><td>100.0%</td></tr>
+            <tr><td>Pfizer 3/75</td><td>87.0%</td></tr>
+            <tr><td>GSK 4/400</td><td>100.0%</td></tr>
+            <tr><td>Lead-likeness</td><td>17.0%</td></tr>
+            <tr><td>Brenk filters</td><td>100.0%</td></tr>
+            <tr><td>REOS</td><td>91.0%</td></tr>
+        
+        </table>
+        
+        <h2>Individual Results</h2>
+        <table>
+            <tr>
+                <th>SMILES</th>
+                <th>MW</th>
+                <th>LogP</th>
+                <th>TPSA</th>
+                <th>Lipinski</th>
+                <th>Veber</th>
+                <th>Ghose</th>
+                <th>Egan</th>
+                <th>Muegge</th>
+                <th>Rule of 3</th>
+                <th>CNS MPO</th>
+                <th>bRo5</th>
+                <th>PAINS</th>
+                <th>Pfizer 3/75</th>
+                <th>GSK 4/400</th>
+                <th>Lead-like</th>
+                <th>Brenk</th>
+                <th>REOS</th>
+                <th>Drug-like</th>
+                <th>Total Violations</th>
+            </tr>
+    
+            <tr>
+                <td class="smiles">CCN(CC)C(=O)COc1ccc(cc1OC)CC=C</td>
+                <td>277.2</td>
+                <td>2.67</td>
+                <td>38.8</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[C@@]1(C(=O)C=C(O1)C(=O)[O-])c2ccccc2</td>
+                <td>217.1</td>
+                <td>0.13</td>
+                <td>66.4</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">c1ccc(cc1)C(c2ccccc2)[S@](=O)CC(=O)NO</td>
+                <td>289.1</td>
+                <td>2.03</td>
+                <td>66.4</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CCC[S@](=O)c1ccc2c(c1)[nH]/c(=N/C(=O)OC)/[nH]2</td>
+                <td>281.1</td>
+                <td>1.68</td>
+                <td>87.3</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC(C)C[C@@H]1C(=O)N(C(=S)N1)CC=C</td>
+                <td>212.1</td>
+                <td>1.30</td>
+                <td>32.3</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CCC(=O)O[C@]1(CC[NH+](C[C@@H]1CC=C)C)c2ccccc2</td>
+                <td>288.2</td>
+                <td>1.95</td>
+                <td>30.7</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[C@@H](c1ccc(cc1)NCC(=C)C)C(=O)[O-]</td>
+                <td>218.1</td>
+                <td>1.53</td>
+                <td>52.2</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC(C)[NH2+]C[C@H](COc1ccccc1CC=C)O</td>
+                <td>250.2</td>
+                <td>1.13</td>
+                <td>46.1</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[C@H](Cc1ccccc1)[NH2+][C@@H](C#N)c2ccccc2</td>
+                <td>251.2</td>
+                <td>2.45</td>
+                <td>40.4</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[C@@H](CC(c1ccccc1)(c2ccccc2)C(=O)N)[NH+](C)C</td>
+                <td>297.2</td>
+                <td>1.38</td>
+                <td>47.5</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">Cc1c(c(=O)n(n1C)c2ccccc2)NC(=O)[C@H](C)[NH+](C)C</td>
+                <td>303.2</td>
+                <td>-0.04</td>
+                <td>60.5</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">c1ccc(cc1)[C@@H](C(=O)[O-])O</td>
+                <td>151.0</td>
+                <td>-0.53</td>
+                <td>60.4</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td>No</td>
+                <td>10</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC[C@](C)(C[NH+](C)C)OC(=O)c1ccccc1</td>
+                <td>236.2</td>
+                <td>1.16</td>
+                <td>30.7</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">COc1cc(c(c2c1OCO2)OC)CC=C</td>
+                <td>222.1</td>
+                <td>2.16</td>
+                <td>36.9</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">Cc1ccccc1NC(=O)[C@H](C)[NH+]2CCCC2</td>
+                <td>233.2</td>
+                <td>1.00</td>
+                <td>33.5</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">COc1cccc2c1cc(c3c2c4c(cc3C(=O)[O-])OCO4)[N+](=O)[O...</td>
+                <td>340.0</td>
+                <td>2.00</td>
+                <td>111.0</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC(=O)Oc1ccccc1C(=O)[O-]</td>
+                <td>179.0</td>
+                <td>-0.02</td>
+                <td>66.4</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td>No</td>
+                <td>8</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[NH+]1[C@@H]2CC[C@H]1CC(C2)OC(=O)[C@H](CO)c3ccccc...</td>
+                <td>290.2</td>
+                <td>0.51</td>
+                <td>51.0</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[N+]1([C@@H]2CC[C@H]1CC(C2)OC(=O)[C@H](CO)c3ccccc...</td>
+                <td>305.2</td>
+                <td>1.94</td>
+                <td>69.6</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">c1cc(ccc1[C@@H](CC(=O)[O-])C[NH3+])Cl</td>
+                <td>213.1</td>
+                <td>-0.19</td>
+                <td>67.8</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">c1cc(ccc1C(=O)[O-])N[C@@H]2[C@@H]([C@H]([C@@H](CO2...</td>
+                <td>268.1</td>
+                <td>-2.10</td>
+                <td>122.1</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>12</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[C@@H](c1ccccc1)NNC(=O)c2ccccc2</td>
+                <td>240.1</td>
+                <td>2.68</td>
+                <td>41.1</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[C@@H](c1ccc2c(c1)nc(o2)c3ccc(cc3)Cl)C(=O)[O-]</td>
+                <td>300.0</td>
+                <td>3.00</td>
+                <td>66.2</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CCc1c(c2ccccc2o1)C(=O)c3ccc(cc3)O</td>
+                <td>266.1</td>
+                <td>3.93</td>
+                <td>50.4</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC(=O)O[C@H](c1ccc(c(c1)Cl)Cl)C(Cl)(Cl)Cl</td>
+                <td>333.9</td>
+                <td>4.97</td>
+                <td>26.3</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">c1ccc(cc1)C(=O)O[C@@H]2C[NH+]3CCC2CC3</td>
+                <td>232.1</td>
+                <td>0.52</td>
+                <td>30.7</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">c1ccc(cc1)[C@@H](C(=O)c2ccccc2)O</td>
+                <td>212.1</td>
+                <td>2.60</td>
+                <td>37.3</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">c1ccc(cc1)COC(=O)[C@H](c2ccccc2)O</td>
+                <td>242.1</td>
+                <td>2.46</td>
+                <td>46.5</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[C@@H](C[N+](C)(C)C)OC(=O)N</td>
+                <td>161.1</td>
+                <td>0.18</td>
+                <td>52.3</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td>No</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[N+](C)(C)CCO[C@H](Cc1ccccc1)c2ccccc2</td>
+                <td>284.2</td>
+                <td>3.69</td>
+                <td>9.2</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC1=C(C(=O)C[C@@H]1OC(=O)[C@H]2[C@H](C2(C)C)C=C(C)...</td>
+                <td>302.2</td>
+                <td>4.00</td>
+                <td>43.4</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[C@H](Cc1cc(c(cc1OC)Br)OC)[NH3+]</td>
+                <td>274.0</td>
+                <td>1.64</td>
+                <td>46.1</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">COc1ccc(cc1)C(=O)/C(=C/C(=O)[O-])/Br</td>
+                <td>283.0</td>
+                <td>0.91</td>
+                <td>66.4</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[NH+](C)CCO[C@H](c1ccccc1)c2ccc(cc2)Br</td>
+                <td>334.1</td>
+                <td>2.70</td>
+                <td>13.7</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[NH+](C)CC[C@@H](c1ccc(cc1)Br)c2ccccn2</td>
+                <td>319.1</td>
+                <td>2.51</td>
+                <td>17.3</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CCOc1ccc(cc1)NC(=O)C[C@@H](C)O</td>
+                <td>223.1</td>
+                <td>1.79</td>
+                <td>58.6</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CCc1cccc2c1oc(c2)[C@@H](C[NH2+]C(C)(C)C)O</td>
+                <td>262.2</td>
+                <td>2.39</td>
+                <td>50.0</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[NH+]1CCc2cc3c(c-4c2[C@@H]1Cc5c4c(c(cc5)OC)O)OCO3</td>
+                <td>326.1</td>
+                <td>1.46</td>
+                <td>52.4</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC(C)(C)[NH2+]C[C@H](COc1ccccc1C#N)O</td>
+                <td>249.2</td>
+                <td>0.66</td>
+                <td>69.9</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">Cc1ccc(c(c1)OC[C@H](C[NH2+]C(C)(C)C)O)Cl</td>
+                <td>272.1</td>
+                <td>1.75</td>
+                <td>46.1</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC[C@@H](c1ccc(cc1)c2ccccc2)C(=O)[O-]</td>
+                <td>239.1</td>
+                <td>2.60</td>
+                <td>40.1</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CCCC(=O)c1cc(ccc1OC[C@@H](C[NH2+]C(C)(C)C)O)F</td>
+                <td>312.2</td>
+                <td>1.91</td>
+                <td>63.1</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CCN(C[C@@H](C)O)c1ccc(nn1)NNC(=O)OCC</td>
+                <td>283.2</td>
+                <td>0.76</td>
+                <td>99.6</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>9</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[C@]12CC[C@H](C1(C)C)[C@@H](C2=O)Br</td>
+                <td>230.0</td>
+                <td>2.78</td>
+                <td>17.1</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[NH+](C)CCO[C@@H](c1ccc(cc1)Cl)c2ccccn2</td>
+                <td>291.1</td>
+                <td>1.99</td>
+                <td>26.6</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC(C)(C)[NH2+]C[C@H](c1ccc(c(c1)NC(=O)N)O)O</td>
+                <td>268.2</td>
+                <td>0.28</td>
+                <td>112.2</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>10</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C#C[C@@H](c1ccccc1)OC(=O)N</td>
+                <td>175.1</td>
+                <td>1.46</td>
+                <td>52.3</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td>No</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC(C)OC(=O)c1cc2c([nH]1)cccc2OC[C@@H](C[NH2+]C(C)(...</td>
+                <td>349.2</td>
+                <td>1.83</td>
+                <td>88.2</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC(C)(C)[NH2+]C[C@H](COc1cccc2c1CCC(=O)N2)O</td>
+                <td>293.2</td>
+                <td>0.67</td>
+                <td>75.2</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CN1[C@@H](S(=O)(=O)CCC1=O)c2ccc(cc2)Cl</td>
+                <td>273.0</td>
+                <td>1.62</td>
+                <td>54.5</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">c1ccc(cc1)[C@@H](C(=O)NC(=O)N)Cl</td>
+                <td>212.0</td>
+                <td>1.16</td>
+                <td>72.2</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">c1cc(ccc1OC[C@@H](CO)O)Cl</td>
+                <td>202.0</td>
+                <td>1.07</td>
+                <td>49.7</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">c1cc(ccc1OC[C@@H](COC(=O)N)O)Cl</td>
+                <td>245.0</td>
+                <td>1.17</td>
+                <td>81.8</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[C@@](c1ccccc1)(c2ccc(cc2)Cl)OCC[NH+](C)C</td>
+                <td>304.1</td>
+                <td>2.76</td>
+                <td>13.7</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">c1ccc(cc1)C2(C[C@@H]2C3=[NH+]CCN3)c4ccccc4</td>
+                <td>263.2</td>
+                <td>1.07</td>
+                <td>26.0</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[C@@H]([C@H](c1ccccc1)O)[NH+](C)C/C=C/c2ccccc2</td>
+                <td>282.2</td>
+                <td>2.34</td>
+                <td>24.7</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">COc1cc(cc(c1OC)OC)/C=C/C(=O)N2CCCCCCC2</td>
+                <td>333.2</td>
+                <td>3.52</td>
+                <td>48.0</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">COc1ccc2c(c1)c(nc(=O)n2CC3CC3)c4ccccc4</td>
+                <td>306.1</td>
+                <td>3.48</td>
+                <td>44.1</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC[NH+](CC)CCOc1c(cccc1OC)CC=C</td>
+                <td>264.2</td>
+                <td>1.73</td>
+                <td>22.9</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CN1c2ccc(cc2[C@@H]3c4ccccc4CC[NH+]3CC1=O)Cl</td>
+                <td>313.1</td>
+                <td>1.85</td>
+                <td>24.8</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">c1c2c(cc(c1C3CCCCC3)Cl)[C@H](CC2)C(=O)[O-]</td>
+                <td>277.1</td>
+                <td>3.17</td>
+                <td>40.1</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC(C)(C)C(=O)[C@@H](n1ccnc1)Oc2ccc(cc2)Cl</td>
+                <td>292.1</td>
+                <td>3.73</td>
+                <td>44.1</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[C@H](C[NH+](C)C)[C@@](C)(Cc1ccc(cc1)Cl)O</td>
+                <td>256.1</td>
+                <td>1.41</td>
+                <td>24.7</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">Cc1c(cccc1Cl)Nc2c(cccn2)C(=O)OC[C@@H](CO)O</td>
+                <td>336.1</td>
+                <td>2.30</td>
+                <td>91.7</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC(C)(C)[NH2+]C[C@@H](COc1cc(ccc1Cl)Cl)O</td>
+                <td>292.1</td>
+                <td>2.10</td>
+                <td>46.1</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC(C)[NH2+]C[C@H](c1ccccc1Cl)O</td>
+                <td>214.1</td>
+                <td>1.35</td>
+                <td>36.8</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[NH+](C)CC[C@@H]1c2ccc(cc2CCc3c1nccc3)Cl</td>
+                <td>301.1</td>
+                <td>2.50</td>
+                <td>17.3</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>2</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[NH+]1CC[C@@]23CC(=O)C(=C[C@H]2[C@@H]1Cc4c3c(c(cc...</td>
+                <td>330.2</td>
+                <td>0.60</td>
+                <td>60.2</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC(C)(C)[NH2+]C[C@@H](c1ccc(c(c1)O)O)O</td>
+                <td>226.1</td>
+                <td>0.49</td>
+                <td>77.3</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>8</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CN1CCc2cc3c(c(c2[C@H]1O)OC)OCO3</td>
+                <td>237.1</td>
+                <td>0.90</td>
+                <td>51.2</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[C@@H](CN1c2ccccc2Sc3c1cc(cc3)C#N)C[NH+](C)C</td>
+                <td>324.2</td>
+                <td>2.94</td>
+                <td>31.5</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[C@@H]1C[C@H](CC(C1)(C)C)OC(=O)[C@@H](c2ccccc2)O</td>
+                <td>276.2</td>
+                <td>3.48</td>
+                <td>46.5</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">c1ccc(cc1)[C@H]2C(=O)N=C(O2)NC3CC3</td>
+                <td>216.1</td>
+                <td>1.39</td>
+                <td>50.7</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC[C@H](C(=O)[O-])C1(CCCCC1)O</td>
+                <td>185.1</td>
+                <td>0.46</td>
+                <td>60.4</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td>No</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[NH+](C)CCOC(=O)[C@H](c1ccccc1)C2(CCCC2)O</td>
+                <td>292.2</td>
+                <td>0.76</td>
+                <td>51.0</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[NH+](C)CC(=O)N1c2ccccc2Sc3c1cccc3</td>
+                <td>285.1</td>
+                <td>1.96</td>
+                <td>24.8</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC(C)[NH2+]C[C@H](c1ccc(cc1)O)O</td>
+                <td>196.1</td>
+                <td>0.40</td>
+                <td>57.1</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td>No</td>
+                <td>9</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC(C)[NH2+]C[C@H](COc1ccc(cc1C(=O)C)NC(=O)C)O</td>
+                <td>309.2</td>
+                <td>0.56</td>
+                <td>92.2</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>9</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[NH+]1Cc2cc(ccc2[C@@H](C1)c3ccc(c(c3)Cl)Cl)OC</td>
+                <td>322.1</td>
+                <td>3.16</td>
+                <td>13.7</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC[NH+](CC)CC(=O)N1c2ccccc2Sc3c1cccc3</td>
+                <td>313.1</td>
+                <td>2.74</td>
+                <td>24.8</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC[NH+](CC)[C@@H](C)C(=O)c1ccccc1</td>
+                <td>206.2</td>
+                <td>1.18</td>
+                <td>21.5</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC[NH+](CC)[C@@H](C)C=C(c1cccs1)c2cccs2</td>
+                <td>292.1</td>
+                <td>3.55</td>
+                <td>4.4</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC[C@@H]1C[NH+]2CC[C@H]1C[C@@H]2[C@@H](c3ccnc4c3cc...</td>
+                <td>327.2</td>
+                <td>1.98</td>
+                <td>46.8</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">Cn1cnc2c1c(=O)n(c(=O)n2C)C[C@@H](CO)O</td>
+                <td>254.1</td>
+                <td>-2.21</td>
+                <td>102.3</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>10</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">Cc1c(=O)c2ccc(c(c2oc1c3ccccc3)C[NH+](C)C)OC</td>
+                <td>324.2</td>
+                <td>2.42</td>
+                <td>43.9</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC(=O)Nc1ccc(cc1)C(=O)[O-]</td>
+                <td>178.1</td>
+                <td>0.01</td>
+                <td>69.2</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td>No</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[C@@H]1C(=O)N(c2cc(ccc2O1)Cl)C[C@@H](CO)O</td>
+                <td>271.1</td>
+                <td>0.81</td>
+                <td>70.0</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C1[C@@H](O[C@H](O1)CI)CO</td>
+                <td>244.0</td>
+                <td>0.16</td>
+                <td>38.7</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[C@](c1ccccc1)(c2ccccn2)OCC[NH+](C)C</td>
+                <td>271.2</td>
+                <td>1.51</td>
+                <td>26.6</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C[C@@](c1ccccc1)(c2ccc(cc2)Br)OCC[NH+](C)C</td>
+                <td>348.1</td>
+                <td>2.87</td>
+                <td>13.7</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CCc1ccc(cc1)C(=O)[C@H](C)C[NH+]2CCCCC2</td>
+                <td>260.2</td>
+                <td>2.14</td>
+                <td>21.5</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC[NH+]1CCC[C@@H]1CNC(=O)C(c2ccccc2)(c3ccccc3)O</td>
+                <td>339.2</td>
+                <td>1.11</td>
+                <td>53.8</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC(C)[NH2+]C[C@H](COc1ccc(cc1)CCC(=O)OC)O</td>
+                <td>296.2</td>
+                <td>0.50</td>
+                <td>72.4</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CCN(CC)C(=O)c1ccc(c(c1)OC)O</td>
+                <td>223.1</td>
+                <td>1.88</td>
+                <td>49.8</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC[C@](/C=C/Cl)(C#C)O</td>
+                <td>144.0</td>
+                <td>1.51</td>
+                <td>20.2</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td>No</td>
+                <td>8</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CCOC(=O)[C@@]1(CCC[NH+](CC1)C)c2ccccc2</td>
+                <td>262.2</td>
+                <td>1.19</td>
+                <td>30.7</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CCN1C(=O)[C@H](NC1=O)c2ccccc2</td>
+                <td>204.1</td>
+                <td>1.30</td>
+                <td>49.4</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC[NH+](C)[C@@H](C)C=C(c1cccs1)c2cccs2</td>
+                <td>278.1</td>
+                <td>3.16</td>
+                <td>4.4</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CC[C@H]([C@H](c1ccc(c(c1)O)O)O)[NH3+]</td>
+                <td>198.1</td>
+                <td>0.15</td>
+                <td>88.3</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td>No</td>
+                <td>10</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CCC[NH+](CC)[C@@H](CC)C(=O)Nc1c(cccc1C)C</td>
+                <td>277.2</td>
+                <td>2.34</td>
+                <td>33.5</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td>Yes</td>
+                <td>3</td>
+            </tr>
+        
+        </table>
+    </body>
+    </html>
+    

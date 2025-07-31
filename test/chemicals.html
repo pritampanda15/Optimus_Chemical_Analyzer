@@ -1,0 +1,152 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Optimus Analysis Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            table { border-collapse: collapse; width: 100%; margin: 20px 0; overflow-x: auto; }
+            th, td { border: 1px solid #ddd; padding: 6px; text-align: center; font-size: 12px; }
+            th { background-color: #f2f2f2; font-weight: bold; }
+            .pass { color: green; font-weight: bold; }
+            .fail { color: red; font-weight: bold; }
+            .na { color: gray; font-style: italic; }
+            .smiles { font-family: monospace; text-align: left; }
+            .summary-table { width: 50%; }
+            .summary-table th, .summary-table td { text-align: left; padding: 8px; }
+        </style>
+    </head>
+    <body>
+        <h1>Optimus Chemical Analysis Report</h1>
+        <p>Generated for 3 compounds</p>
+        
+        <h2>Summary Statistics</h2>
+        <table class="summary-table">
+            <tr><th>Metric</th><th>Value</th></tr>
+    
+            <tr><td>Total Compounds</td><td>3</td></tr>
+            <tr><td>Success Rate</td><td>100.0%</td></tr>
+            <tr><td>Average MW</td><td>95.4 Da</td></tr>
+            <tr><td>Average LogP</td><td>1.18</td></tr>
+            <tr><td>Average TPSA</td><td>12.1 Ų</td></tr>
+            <tr><td>Drug-like Fraction</td><td>0.0%</td></tr>
+        </table>
+        
+        <h2>Rule Pass Rates</h2>
+        <table class="summary-table">
+            <tr><th>Rule</th><th>Pass Rate</th></tr>
+            <tr><td>Lipinski (Ro5)</td><td>100.0%</td></tr>
+            <tr><td>Veber</td><td>100.0%</td></tr>
+            <tr><td>Ghose</td><td>0.0%</td></tr>
+            <tr><td>Egan</td><td>100.0%</td></tr>
+            <tr><td>Muegge</td><td>0.0%</td></tr>
+            <tr><td>Rule of 3</td><td>100.0%</td></tr>
+            <tr><td>CNS MPO</td><td>0.0%</td></tr>
+            <tr><td>bRo5</td><td>0.0%</td></tr>
+            <tr><td>PAINS</td><td>100.0%</td></tr>
+            <tr><td>Pfizer 3/75</td><td>100.0%</td></tr>
+            <tr><td>GSK 4/400</td><td>100.0%</td></tr>
+            <tr><td>Lead-likeness</td><td>0.0%</td></tr>
+            <tr><td>Brenk filters</td><td>100.0%</td></tr>
+            <tr><td>REOS</td><td>0.0%</td></tr>
+        
+        </table>
+        
+        <h2>Individual Results</h2>
+        <table>
+            <tr>
+                <th>SMILES</th>
+                <th>MW</th>
+                <th>LogP</th>
+                <th>TPSA</th>
+                <th>Lipinski</th>
+                <th>Veber</th>
+                <th>Ghose</th>
+                <th>Egan</th>
+                <th>Muegge</th>
+                <th>Rule of 3</th>
+                <th>CNS MPO</th>
+                <th>bRo5</th>
+                <th>PAINS</th>
+                <th>Pfizer 3/75</th>
+                <th>GSK 4/400</th>
+                <th>Lead-like</th>
+                <th>Brenk</th>
+                <th>REOS</th>
+                <th>Drug-like</th>
+                <th>Total Violations</th>
+            </tr>
+    
+            <tr>
+                <td class="smiles">CCO Ethanol</td>
+                <td>46.0</td>
+                <td>-0.00</td>
+                <td>20.2</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td>No</td>
+                <td>9</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">C1=CC=CC=C1 Benzene</td>
+                <td>78.0</td>
+                <td>1.69</td>
+                <td>0.0</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td>No</td>
+                <td>8</td>
+            </tr>
+        
+            <tr>
+                <td class="smiles">CN1CCC[C@H]1c2cccnc2 Nicotine</td>
+                <td>162.1</td>
+                <td>1.85</td>
+                <td>16.1</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td class="pass">PASS</td>
+                <td class="fail">FAIL</td>
+                <td>No</td>
+                <td>6</td>
+            </tr>
+        
+        </table>
+    </body>
+    </html>
+    
