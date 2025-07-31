@@ -7,7 +7,7 @@ Provides Discovery Studio-level accuracy for drug discovery applications.
 
 __version__ = "1.0.0"
 __author__ = "Pritam"
-__email__ = "pritam@example.com"
+__email__ = "pritam@stanford.edu"
 
 from .analyzer import ChemicalAnalyzer
 from .properties import MolecularProperties

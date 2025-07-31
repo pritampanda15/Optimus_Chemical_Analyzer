@@ -56,7 +56,7 @@ Optimus is a comprehensive Python package for molecular property calculations an
 
 ## Features
 
-### 🧬 Molecular Property Calculations
+###  Molecular Property Calculations
 - **Accurate RDKit-based calculations** matching Discovery Studio standards
 - Molecular weight, LogP, LogD, pKa predictions
 - Hydrogen bond donors/acceptors
@@ -64,7 +64,7 @@ Optimus is a comprehensive Python package for molecular property calculations an
 - Rotatable bonds and ring analysis
 - Molar refractivity and more
 
-### 📊 Complete ADMET Rules Analysis
+###  Complete ADMET Rules Analysis
 Implementation of all 14 major drug screening rules:
 
 1. **Lipinski (Ro5)** - Oral bioavailability
@@ -177,18 +177,6 @@ Each rule returns a `RuleResult` object with:
 - `violations`: Number of violations
 - `details`: Detailed breakdown of criteria
 
-## Accuracy and Validation
-
-Optimus calculations are validated against:
-- **Discovery Studio** reference values
-- **ChEMBL** database compounds
-- **FDA approved drugs** dataset
-
-### Validation Results
-- **Molecular Weight**: 100% accuracy
-- **LogP**: R² = 0.95 vs Discovery Studio
-- **TPSA**: R² = 0.98 vs Discovery Studio
-- **Rule Classifications**: >99% agreement
 
 ## Examples
 

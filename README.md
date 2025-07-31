@@ -47,7 +47,7 @@ print(results.drug_likeness_score)  # 0.85
 ## Installation
 
 ```bash
-pip install optimus-chem
+pip install optimus
 ```
 
 ### From Source

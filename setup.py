@@ -10,14 +10,14 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="optimus-chem",
+    name="optimus",
     version="1.0.0",
-    author="Pritam",
-    author_email="pritam@example.com",
+    author="Pritam Kumar Panda",
+    author_email="pritam@stanford.edu",
     description="Comprehensive Chemical Analysis Package for Drug Discovery",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/username/optimus",
+    url="https://github.com/pritampanda15/Optimus_Chemical_Analyzer",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",

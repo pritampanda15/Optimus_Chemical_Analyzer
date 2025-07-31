@@ -104,7 +104,7 @@ If you get import errors:
 pip list | grep optimus
 
 # Reinstall in development mode
-pip uninstall optimus-chem
+pip uninstall optimus
 pip install -e .
 ```
 
